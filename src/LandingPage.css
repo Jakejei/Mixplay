@@ -1,0 +1,28 @@
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.carousel-item {
+  transition: transform 1s ease, opacity 1s ease !important;
+}
+
+.button-overlay {
+  z-index: 10;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.btn-gamified {
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-gamified:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
