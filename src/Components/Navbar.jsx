@@ -11,7 +11,7 @@ export function Navbar() {
       <div className="container">
         <Link
           className="navbar-brand d-flex align-items-center text-white fw-bold"
-          to="/home"
+          to="/"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
