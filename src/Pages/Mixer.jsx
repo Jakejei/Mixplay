@@ -169,7 +169,7 @@ export function Mixer(){
         style={{ minWidth: "0", backgroundColor: "#18191c", borderRadius: "8px" }}
       >
         <img
-          src="/a2cd8a8a-0e26-4b4a-bd58-89fb32fd4825.png"
+          src="../mixer.png"
           alt="Mixer"
           className="img-fluid"
           style={{ maxHeight: "90vh", objectFit: "contain" }}

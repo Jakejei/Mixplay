@@ -1,9 +1,24 @@
 import { Navbar } from "../Components/Navbar";
 import { Link } from "react-router-dom";
-
-
+ 
 export function Home(){
+   
+    const imgStyle = {
+        maxWidth: '100%',
+        height: 'auto',
+      };
+     
+      const itemStyle = {
+        width: '120px',
+        minHeight: '120px',
+        // maxHeight: 'auto' is not valid – omit it if not needed
+        float: 'left',
+        margin: '3px',
+        padding: '3px',
+      };
+ 
     return(
+       
        <>
        <Navbar />
        <style>{`
@@ -44,7 +59,7 @@ export function Home(){
         .bar8 { left: 66%; height: 28px; animation-name: wave4; animation-duration: 1.5s; animation-delay: 1.4s; }
         .bar9 { left: 74%; height: 23px; animation-name: wave1; animation-duration: 1.7s; animation-delay: 1.6s; }
         .bar10 { left: 82%; height: 30px; animation-name: wave2; animation-duration: 1.3s; animation-delay: 1.8s; }
-
+ 
         /* Keyframes for bars to grow and shrink */
         @keyframes wave1 {
           0%, 100% { height: 20px; opacity: 0.3; }
@@ -62,7 +77,7 @@ export function Home(){
           0%, 100% { height: 22px; opacity: 0.3; }
           50% { height: 55px; opacity: 1; }
         }
-
+ 
         .section {
           height: 100vh;
           width: 100vw;
@@ -178,7 +193,7 @@ export function Home(){
           }
         }
       `}</style>
-
+ 
       {/* Music wave background */}
       <div className="music-wave-bg">
         <div className="bar bar1"></div>
@@ -192,7 +207,7 @@ export function Home(){
         <div className="bar bar9"></div>
         <div className="bar bar10"></div>
       </div>
-
+ 
       <div style={{ scrollSnapType: "y mandatory", overflowY: "scroll", height: "100vh" }}>
         {/* First section: image on right */}
         <section className="section d-flex blue-bg">
@@ -203,24 +218,24 @@ export function Home(){
                 Master guitar basics quickly with our easy-to-follow lessons.
                 </p>
               <Link
-                to="/try-whitepace"
+                to="/learnguitar"
                 className="btn-blue mt-3"
                 style={{ background: "#FFDD70", color: "#0D2B56" }}
               >
                 Learn Here! &nbsp; &rarr;
               </Link>
             </div>
-            <div className="image-holder">
-              <img src="/path/to/your/image1.jpg" alt="Placeholder 1" />
-            </div>
+            {/*<div className="image-holder" style={itemStyle}>
+              <img src="/path/to/your/image1.jpg" alt="Placeholder 1" style={imgStyle} />
+            </div>*/}
           </div>
         </section>
-
+ 
         {/* Second section: image on left */}
         <section className="section d-flex white-bg flex-column justify-content-center">
           <div className="container-fluid d-flex justify-content-between align-items-center flex-wrap">
-            <div className="image-holder">
-              <img src="/path/to/your/image2.jpg" alt="Placeholder 2" />
+            <div className="image-holder" style={itemStyle}>
+              <img src="../tuner.png" alt="Placeholder 2" style={imgStyle} />
             </div>
             <div style={{ maxWidth: "460px" }}>
               <h2 className="title-large mb-3">Built-in <br /> Tuner</h2>
@@ -228,14 +243,14 @@ export function Home(){
                 Tune your instrument accurately anytime with our integrated tuner.
                 </p>
               <Link
-                to="/get-started"
+                to="/tuner"
                 className="btn-blue mt-3"
               >
                 Tune here! &nbsp; &rarr;
               </Link>
             </div>
           </div>
-
+ 
           <div className="container-fluid d-flex justify-content-between align-items-center mt-5 flex-wrap">
             <div className="orbit">
               <div className="circle"></div>
@@ -248,7 +263,7 @@ export function Home(){
             </div>
           </div>
         </section>
-
+ 
         {/* Third section: image on right */}
         <section className="section d-flex darkblue-bg">
           <div className="container-fluid d-flex justify-content-between align-items-center flex-wrap">
@@ -260,19 +275,19 @@ export function Home(){
             Blend sounds effortlessly using our multi-instrument mixer tools.
             </p>
               <Link
-                to="/lets-go"
+                to="/mixer"
                 className="btn-blue mt-3"
                 style={{ background: "#FFDD70", color: "#0D2B56" }}
               >
                 Let's Go &nbsp; &rarr;
               </Link>
             </div>
-            <div className="image-holder">
-              <img src="/path/to/your/image3.jpg" alt="Placeholder 3" />
+            <div className="image-holder" style={itemStyle}>
+              <img src="../mixer.png" alt="Placeholder 3" style={imgStyle} />
             </div>
           </div>
         </section>
       </div>
-       </> 
+       </>
     );
 }
